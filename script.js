@@ -1,25 +1,24 @@
 
 const onLoad = () =>  {
-    let n = 0;    
+    let position = 0;    
     let who = ["The dog ", "My grandma ", "His turtle ", "My bird "];
     let action = ["ate ","peed ","crushed ","broke "];
     let what = ["my homework ","the keys ","the car ","my phone "];
     let when = ["<br>before the class","<br>right in time","<br>when I finished","<br>during my lunch","<br>while I was praying"];
-    let TheExcuse = " ";
-    n = Math.floor(Math.random() * (who.length - 1));
-    TheExcuse = TheExcuse + who[n];
-    n = Math.floor(Math.random() * (action.length - 1));
-    TheExcuse = TheExcuse + action[n];
-    n = Math.floor(Math.random() * (what.length - 1));
-    TheExcuse = TheExcuse + what[n];
-    n = Math.floor(Math.random() * (when.length - 1));
-    TheExcuse = TheExcuse + when[n];
+    let theExcuse = "";
+    position = Math.floor(Math.random() * (who.length  ));
+    theExcuse = theExcuse + who[position];
+     position = Math.floor(Math.random() * (action.length ));
+    theExcuse = theExcuse + action[position];
+     position = Math.floor(Math.random() * (what.length ));
+    theExcuse = theExcuse + what[position];
+     position = Math.floor(Math.random() * (when.length ));
+    theExcuse = theExcuse + when[position];
+    return theExcuse;
+ };
 
-    return TheExcuse;
-                    };
+let elementModify = document.querySelector("#excuse");
 
-let elem = document.querySelector("#excuse");
-
-elem.addEventListener('click', () =>{
-     elem.innerHTML= onLoad() ;
+elementModify.addEventListener('click', () =>{
+     elementModify.innerHTML= onLoad() ;
 });

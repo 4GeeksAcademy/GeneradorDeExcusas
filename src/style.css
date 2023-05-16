@@ -9,7 +9,8 @@ body {
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 14%,
-    rgba(9, 9, 121, 1) 45%,
+    rgb(97, 0, 161) 45%,
+    rgb(255, 0, 30) 60%,
     rgba(162, 0, 255, 1) 95%
   );
   margin: auto;
